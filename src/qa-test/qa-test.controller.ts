@@ -36,3 +36,65 @@ export const loadTheoryTest = (req: Request, res: Response) => {
   }
   res.status(200).send(filteredTest);
 };
+
+export const techResults = (req: Request, res: Response) => {
+  const answers = req.body.answers;
+  let result = 0;
+  const questionIds = [
+    ...new Set(
+      answers.map(
+        (item: { questionId: number; answer: string }) => item.questionId
+      )
+    ),
+  ];
+  if (questionIds.length !== 12) {
+    return res.status(400).send({ message: "Questions must be unique" });
+  }
+  answers.forEach((item: { questionId: number; answer: string }) => {
+    const question = qaTechTest.find(
+      (question) => question.questionId === item.questionId
+    );
+    if (
+      (question as {
+        question: string;
+        questionId: number;
+        answers: string[];
+        rightAnswer: string;
+      }).rightAnswer === item.answer
+    ) {
+      result += 8.33333;
+    }
+  });
+  return res.status(200).send({ result: `${Math.round(result)}%` });
+};
+
+export const theoryResults = (req: Request, res: Response) => {
+  const answers = req.body.answers;
+  let result = 0;
+  const questionIds = [
+    ...new Set(
+      answers.map(
+        (item: { questionId: number; answer: string }) => item.questionId
+      )
+    ),
+  ];
+  if (questionIds.length !== 12) {
+    return res.status(400).send({ message: "Questions must be unique" });
+  }
+  answers.forEach((item: { questionId: number; answer: string }) => {
+    const question = qaTheoryTest.find(
+      (question) => question.questionId === item.questionId
+    );
+    if (
+      (question as {
+        question: string;
+        questionId: number;
+        answers: string[];
+        rightAnswer: string;
+      }).rightAnswer === item.answer
+    ) {
+      result += 8.33333;
+    }
+  });
+  return res.status(200).send({ result: `${Math.round(result)}%` });
+};
