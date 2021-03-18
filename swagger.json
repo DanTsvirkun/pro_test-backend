@@ -313,6 +313,34 @@
           }
         }
       }
+    },
+    "/user": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get all your info",
+        "parameters": [],
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUserInfo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "No token provided",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized (invalid access token)",
+            "content": {}
+          }
+        }
+      }
     }
   },
   "components": {
@@ -907,6 +935,16 @@
             "type": "string",
             "description": "Test's result",
             "example": "91%"
+          }
+        }
+      },
+      "GetUserInfo": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "User's email",
+            "example": "test@email.com"
           }
         }
       }

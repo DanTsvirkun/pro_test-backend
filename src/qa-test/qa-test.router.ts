@@ -2,7 +2,7 @@ import { Router } from "express";
 import Joi from "joi";
 import tryCatchWrapper from "../helpers/function-helpers/try-catch-wrapper";
 import validate from "../helpers/function-helpers/validate";
-import { authorize } from "./../auth/auth.controller";
+import { authorize } from "../auth/auth.controller";
 import {
   loadTechTest,
   loadTheoryTest,
