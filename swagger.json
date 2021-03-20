@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "version": "2.0.0",
-    "title": "Kapusta API docs",
+    "title": "Pro Test API docs",
     "description": "API documentation for GoIT project 'Pro Test'. [Backend github repository](https://github.com/DanTsvirkun/pro_test-backend)",
     "license": {
       "name": "MIT",
