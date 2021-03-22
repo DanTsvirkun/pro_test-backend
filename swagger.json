@@ -498,7 +498,7 @@
             "questionId": 8,
             "answers": [
               "RUP",
-              "Canban",
+              "Kanban",
               "Scrum",
               "Agile",
               "Waterfall",
@@ -606,7 +606,7 @@
               "Waterfall",
               "Scrum",
               "Agile",
-              "Canban",
+              "Kanban",
               "This definition applies to all methodologies",
               "There is not a right option"
             ]
@@ -842,7 +842,7 @@
             },
             {
               "questionId": 5,
-              "answer": "Canban"
+              "answer": "Kanban"
             },
             {
               "questionId": 3,

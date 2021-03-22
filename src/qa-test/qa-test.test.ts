@@ -192,7 +192,7 @@ describe("QA-test router test suite", () => {
         },
         {
           questionId: 5,
-          answer: "Canban",
+          answer: "Kanban",
         },
         {
           questionId: 3,
@@ -247,7 +247,7 @@ describe("QA-test router test suite", () => {
         },
         {
           questionId: 5,
-          answer: "Canban",
+          answer: "Kanban",
         },
         {
           questionId: 3,
@@ -302,7 +302,7 @@ describe("QA-test router test suite", () => {
         },
         {
           questionId: 5,
-          answer: "Canban",
+          answer: "Kanban",
         },
         {
           questionId: 3,
@@ -353,7 +353,7 @@ describe("QA-test router test suite", () => {
         },
         {
           questionId: 5,
-          answer: "Canban",
+          answer: "Kanban",
         },
         {
           questionId: 2,
