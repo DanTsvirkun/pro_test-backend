@@ -11,7 +11,7 @@
   },
   "consumes": ["application/json"],
   "produces": ["application/json"],
-  "servers": [{ "url": "insert server here" }],
+  "servers": [{ "url": "https://protest-backend.goit.global" }],
   "tags": [
     {
       "name": "Auth",
